@@ -1,0 +1,11 @@
+@model MyWebFormApp.BLL.DTOs.ArticleDTO
+
+<h2>Delete Article</h2>
+
+<p>Are you sure you want to delete the article titled: @Model.Title?</p>
+
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="ArticleID" />
+    <button type="submit">Confirm Delete</button>
+</form>
